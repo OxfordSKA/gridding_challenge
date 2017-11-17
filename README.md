@@ -63,21 +63,21 @@ The function that does the actual gridding is `oskar_grid_wproj_d` (in
 double precision) or `oskar_grid_wproj_f` (in single precision). This
 single-threaded function should be replaced to make the gridding run faster.
 
-### Enable checking
+### How to enable checking of outputs
 
 For verification, the output (the visibility grid and the normalisation value)
 of the serial implementation can be compared with the output of the new
 function.
 
 The point at which the replacement gridding function should be called is
-marked clearly in main.c (the section starting at line 290).
+marked clearly in `main.c` (the section starting at line 290).
 If a new gridding function is being tested, use:
 
 ```C
 #define HAVE_NEW_VERSION 1
 ```
 
-on line 46 of main.c to enable the check against the original grid.
+on line 46 of `main.c` to enable the check against the original grid.
 
 The input data provided for this challenge are all in single precision.
 
