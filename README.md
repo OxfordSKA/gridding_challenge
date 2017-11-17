@@ -1,4 +1,4 @@
-# Gridding Challenge Code
+# W-Projection Gridding Challenge
 
 ## 1. Background
 
