@@ -5,7 +5,7 @@
 int check_value_float(float a, float b)
 {
     const float xover = 0.1;
-    const float eps = 9e-4;
+    const float eps = 5e-1;
 
     const float fa = fabs(a), fb = fabs(b);
     /*const float smallest = (fa < fb ? fa : fb);*/
