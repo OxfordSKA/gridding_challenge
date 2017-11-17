@@ -1,6 +1,6 @@
 # Gridding Challenge Code
 
-## [1. Background](#background)
+## 1. Background
 
 This directory contains a simple, serial C implementation of the convolutional
 gridding routine used by the W-projection imaging algorithm. The algorithm is
@@ -22,7 +22,7 @@ The challenge is to parallelise the convolution gridding step in an efficient
 way to take advantage of modern multi-core and many-core processors and their
 cache hierarchies.
 
-## [2. Program structure](#progam-structure)
+## 2. Program structure
 
 ### `main.c`
 
@@ -81,7 +81,7 @@ on line 46 of `main.c` to enable the check against the original grid.
 
 The input data provided for this challenge are all in single precision.
 
-## [3. Building and running the code](#building-and-running)
+## 3. Building and running the code
 
 From this directory, the example code can be built using:
 
@@ -107,7 +107,7 @@ For example:
 $ ./main SKA1-LOW_v5_EL82-EL70_100MHz
 ```
 
-## [4. Test data](#test-data)
+## 4. Test data
 
 Data files to use with this challenge are available here:
 
@@ -123,7 +123,7 @@ summarised in the table below.
 | SKA-LOW EL56-82 | 31395840       |      601     |           72          |
 | SKA-LOW EL82-70 | 31395840       |      339     |           44          |
 
-## [5. Current benchmarks](#benchmarks)
+## 5. Current benchmarks
 
 Recent work on the gridding problem was carried out by the Numerical Algorithms
 Group (NAG) to port the C function to the NVIDIA Pascal (P100)
