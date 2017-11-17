@@ -24,7 +24,7 @@ cache hierarchies.
 
 ## [2. Program structure](#progam-structure)
 
-### In `main.c`:
+### `main.c`
 
 The program reads visibility data from a file with the .vis extension. Each
 visibility has coordinates (uu, vv, ww) in Fourier space, a complex amplitude,
@@ -57,14 +57,13 @@ at the centre of the grid cell it falls into. The value of 'oversample' and
 other kernel and grid parameters are read in from the header of the
 convolution kernel FITS files.
 
-### In `oskar_grid_wproj.c`:
+### `oskar_grid_wproj.c`
 
-The function that does the actual gridding is `oskar_grid_wproj_d`
-(in double precision) or `oskar_grid_wproj_f` (in single precision).
-This single-threaded function should be replaced to make the gridding
-run faster.
+The function that does the actual gridding is `oskar_grid_wproj_d` (in
+double precision) or `oskar_grid_wproj_f` (in single precision). This
+single-threaded function should be replaced to make the gridding run faster.
 
-### Enable checking
+### Enable checking
 
 For verification, the output (the visibility grid and the normalisation value)
 of the serial implementation can be compared with the output of the new
@@ -86,7 +85,7 @@ The input data provided for this challenge are all in single precision.
 
 From this directory, the example code can be built using:
 
-```
+```bash
 $ mkdir build
 $ cd build
 $ cmake ..
@@ -98,13 +97,13 @@ in the data directory.
 
 From the data directory, run using:
 
-```
+```bash
 $ ./main <test_data_root_name>
 ```
 
 For example:
 
-```
+```bash
 $ ./main SKA1-LOW_v5_EL82-EL70_100MHz
 ```
 
@@ -123,7 +122,6 @@ summarised in the table below.
 | Synthetic       | 2152800        |      714     |           36          |
 | SKA-LOW EL56-82 | 31395840       |      601     |           72          |
 | SKA-LOW EL82-70 | 31395840       |      339     |           44          |
-
 
 ## [5. Current benchmarks](#benchmarks)
 
